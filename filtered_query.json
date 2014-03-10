@@ -1,0 +1,20 @@
+{
+  "filter" : {
+    "fquery" : {
+      "query": {
+        "match_phrase" : {
+          "categories" : {
+              "query" : "/demo/shop",
+              "analyzer" : "category_analyzer"
+          }
+        }
+      },
+      "_cache" : false
+    }
+  },
+
+  "query": {
+    "match_all": {}
+  }
+
+}

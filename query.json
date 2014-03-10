@@ -1,0 +1,14 @@
+{
+  "query" : {
+    "match_phrase" : {
+        "categories" : {
+            "query" : "/demo/blindtest",
+            "analyzer" : "category_analyzer"
+        }
+    }
+  }
+}
+
+
+
+//curl localhost:9200/my_index/my_type/_search --data-binary @query.json

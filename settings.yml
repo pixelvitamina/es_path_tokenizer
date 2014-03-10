@@ -1,0 +1,25 @@
+---
+settings:
+  analysis:
+    analyzer:
+      german_analyzer:
+        tokenizer: standard
+        filter: [standard, stop, lowercase, asciifolding, german_stemmer]
+      category_analyzer:
+        tokenizer: path_hierarchy
+    filter:
+      german_stemmer:
+        type: stemmer
+        name: light_german
+mappings:
+  my_type:
+    properties:
+      text:
+        type: "string"
+        analyzer: "german_analyzer"
+      categories:
+        type: "string"
+        analyzer: "category_analyzer"
+
+
+#curl -XPOST localhost:9200/my_index --data-binary @settings.yml

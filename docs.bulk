@@ -1,0 +1,12 @@
+{"create" : {"_type": "my_type"}
+{"text": "lorem ipsum", "categories": "/demo/blindtest/lorem"}
+{"create" : {"_type": "my_type"}
+{"text": "the blind fox", "categories": "/demo/blindtest/fox"}
+{"create" : {"_type": "my_type"}
+{"text": "adidas 101", "categories": "/demo/shop/shoe/adidas"}
+{"create" : {"_type": "my_type"}
+{"text": "nike one", "categories": "/demo/shop/shoe/nike"}
+{"create" : {"_type": "my_type"}
+{"text": "pyrochimps", "categories": "/demo/shop/art/canvas"}
+
+//curl -XPOST localhost:9200/my_index/_bulk --data-binary @docs.bulk
